@@ -1,0 +1,26 @@
+name: 'Setup PHP Action'
+author: pradhanitservices
+description: 'GitHub Action for PHP'
+branding:
+  color: 'purple'
+  icon: 'play-circle'
+inputs:
+  php-version:
+    description: 'Setup PHP version.'
+    default: '8.0'
+    required: true
+  extensions:
+    description: 'Setup PHP extensions.'
+    required: false
+  ini-values:
+    description: 'Add values to php.ini.'
+    required: false
+  coverage: 
+    description: 'Setup code coverage driver.'
+    required: false
+  tools:
+    description: 'Setup popular tools globally.'
+    required: false
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
